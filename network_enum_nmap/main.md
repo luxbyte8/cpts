@@ -18,14 +18,15 @@
 ```
 
 ## Host and Port Scanning
-| State             | Description                                           |
-| :---              | :---                                                  |
-| open              | connection to the port has been established           |
-| closed            | packet with RST was received                          |
-| filtered          | nmap cannot identify if open or closed                |  
-| unfiltered        | only ACK scan; cannot identify if open or closed      |
-| open\|filtered    | got no response                                       |
-| closed\|filtered  | only Idle scan; cannot identify if closed or filtered |
+
+| State                     | Description                                           |
+| :---                      | :---                                                  |
+| open                      | connection to the port has been established           |
+| closed                    | packet with RST was received                          |
+| filtered                  | nmap cannot identify if open or closed                |
+| unfiltered                | only ACK scan; cannot identify if open or closed      |
+| open &#124; filtered      | got no response                                       |
+| closed &#124; filtered    | only Idle scan; cannot identify if closed or filtered |
 
 ### Basic Port Scanning
 ```console
