@@ -3,7 +3,7 @@
 ## Index
 
 - [Network Enumeration with Nmap](./network_enum_nmap/main.md)
-- Footprinting
+- [Footprinting](./footprinting/main.md)
 - Information Gathering - Web Edition
 - Vulnerability Assessment
 - File Transfers

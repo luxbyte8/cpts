@@ -67,6 +67,7 @@
 #> nmap --script-help "smb-* and safe and discovery"
 #> nmap --script-help "safe and (default or discovery)"
 #> nmap --script-help "discovery and not intrusive"
+#> nmap --script-updatedb
 ```
 
 ## Performance
