@@ -76,9 +76,7 @@
 #> smblcient -L -N //10.10.10.10 # list shares; null session
 #> smbclient -U "anonymous" //10.10.10.10/<share> # attempt connecting to share
 #> rpcclient -U "" 10.10.10.10 # connect to SMB
-#> for i in $(seq 500 1000); do rpcclient -N -U "" 10.10.10.10 \ 
-   -c "queryuser 0x$(printf '%x\n' $i)" \
-   | grep "User Name\|user_rid\|group_rid" && echo ""; done
+#> for i in $(seq 500 1000); do rpcclient -N -U "" 10.10.10.10 -c "queryuser 0x$(printf '%x\n' $i)" | grep "User Name\|user_rid\|group_rid" && echo ""; done
 #> samrdump.py 10.10.10.10
 #> smbmap -H 10.10.10.10
 #> crackmapexec smb 10.10.10.10 -u '' -p '' --shares
