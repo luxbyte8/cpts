@@ -118,6 +118,34 @@
 #> sudo umount ./target_nfs
 ```
 
+## DNS
+
+| Server Type       | Description   |
+|:---               | :---          |
+| DNS Root          | Responsible for TLDs  |
+| Authoritative     | Holds authority over a particular zone.<br>Only answer queries from their zone and answer is binding. |
+| Non-authoritative | collect info. on DNS zones via iterative or recursive DNS querying.   |
+| Caching           | Cache info from other servers.<br>Authoritative nameservers determine the duration of cache.  |
+| Forwarding        | forward DNS queries to another DNS server |
+| Resolver          | perform resolution locally on computer or router  |
+
+- All DNS servers work with 3 configuration files:
+    - local DNS configuration
+    - zone files
+    - reverse name resolution
+
+- [Most popular DNS attacks](https://web.archive.org/web/20250329174745/https://securitytrails.com/blog/most-popular-types-dns-attacks)
+
+```console
+#> dig ns [@<DNS>] target.com
+#> dig CH TXT version.bind <DNS IP> # query DNS's server version
+#> dnsenum --dnsserver <DNS IP> --enum -p 0 -s 0 -o subdomains.txt -f </path/to/wordlist> target.com
+#> 
+```
+
+## SMTP
+
+
 ---
 
 - [home](../index.md)
